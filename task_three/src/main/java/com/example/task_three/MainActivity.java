@@ -1,4 +1,4 @@
-package com.example.foruniversity;
+package com.example.task_three;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,11 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class Fireman extends AppCompatActivity implements View.OnClickListener {
+import com.example.task_three.Civil_Protect;
+import com.example.task_three.Fireman;
+import com.example.task_three.Psychology;
 
-//    private static final String TAG = "myLogs";
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    String s = "Click";
+
+
     Button btn;
 
     private static final String TAG = "myLogs";
@@ -21,50 +24,60 @@ public class Fireman extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fireman_layout);
+        setContentView(R.layout.firs_layout);
 
         Log.d(TAG, "Add View element");
 
-        btn = (Button) findViewById(R.id.main);
-        btn.setOnClickListener(this);
-        btn = (Button) findViewById(R.id.psychology);
+        btn = (Button) findViewById(R.id.fireman);
         btn.setOnClickListener(this);
         btn = (Button) findViewById(R.id.civilProtect);
         btn.setOnClickListener(this);
 
-        (findViewById(R.id.logo1)).setOnClickListener(new View.OnClickListener() {
+        btn = (Button) findViewById(R.id.psychology);
+        btn.setOnClickListener(this);
+
+        (findViewById(R.id.main)).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ldubgd.edu.ua/sites/default/files/1_nmz/rozklad/ipb_ekz-zal_41-42.pdf")));
+                Log.i(TAG, "Main page");
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ldubgd.edu.ua/kursantustudentu/rozklad")));
             }
         });
+
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "onRestart(): Fireman");
+        Log.d(TAG, "onRestart(): MainActivity");
     }
+
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart(): Fireman");
+        Log.d(TAG, "onStart(): MainActivity");
     }
+
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume(): Fireman");
+        Log.d(TAG, "onResume(): MainActivity");
     }
+
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause(): MainActivity");
     }
+
     @Override
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop(): MainActivity");
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -74,21 +87,22 @@ public class Fireman extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.main:
-                Intent intent = new Intent(this, MainActivity.class);
+            case R.id.civilProtect:
+                Intent intent = new Intent(this, Civil_Protect.class);
                 startActivity(intent);
                 break;
-            case R.id.civilProtect:
-                Intent intent3 = new Intent(this, Civil_Protect.class);
-                startActivity(intent3);
+            case R.id.fireman:
+                Intent intent2 = new Intent(this, Fireman.class);
+                startActivity(intent2);
                 break;
             case R.id.psychology:
-                Intent intent2 = new Intent(this, Psychology.class);
-                startActivity(intent2);
+                Intent intent3 = new Intent(this, Psychology.class);
+                startActivity(intent3);
                 break;
             default:
                 break;
         }
 
     }
+
 }

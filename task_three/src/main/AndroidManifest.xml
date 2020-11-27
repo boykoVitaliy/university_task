@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foruniversity">
+    package="com.example.task_three">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ForUniversity">
-        <activity android:name=".Psychology"></activity>
-        <activity android:name=".Fireman" />
-        <activity android:name="com.example.foruniversity.MainActivity">
+        <activity android:name="com.example.task_three.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Civil_Protect" />
+        <activity android:name=".Fireman" />
+        <activity android:name=".Psychology" />
     </application>
 
 </manifest>

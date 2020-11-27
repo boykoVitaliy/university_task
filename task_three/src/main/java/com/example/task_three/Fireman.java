@@ -1,4 +1,4 @@
-package com.example.foruniversity;
+package com.example.task_three;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,6 @@ public class Fireman extends AppCompatActivity implements View.OnClickListener {
 
 //    private static final String TAG = "myLogs";
 
-    String s = "Click";
     Button btn;
 
     private static final String TAG = "myLogs";
@@ -58,17 +57,17 @@ public class Fireman extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause(): MainActivity");
+        Log.d(TAG, "onPause(): Fireman");
     }
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop(): MainActivity");
+        Log.d(TAG, "onStop(): Fireman");
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy(): MainActivity");
+        Log.d(TAG, "onDestroy(): Fireman");
     }
 
     @Override
