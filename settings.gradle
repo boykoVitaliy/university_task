@@ -1,3 +1,4 @@
+include ':task_four'
 include ':task_three'
 include ':app'
 rootProject.name = "ForUniversity"
